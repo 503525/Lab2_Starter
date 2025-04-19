@@ -125,11 +125,29 @@
                     <fieldset>
                         <legend>Are you currently affiliated with the team?</legend>
                         <input type="radio" id="yes-affiliated" name="affiliationStatus" value="Y"> Yes, I am.
+                        <label>(Select a subteam, if applicable:)</label>
+                        <input list="team-list" id="team-choice" name="team-choice">
                         <input type="radio" id="not-affiliated" name="affiliationStatus" value="N"> No, I am not.
+                        <datalist id="team-list">
+                            <option value="Programming"></option>
+                            <option value="Art"></option>
+                            <option value="Sound Design"></option>
+                        </datalist>
                     </fieldset>
 
                     <fieldset>
+                        <legend>Please enter your feedback here!</legend>
+                        <label>Feedback Type:</label>
+
+                        <select id="feedback-type" name="feedback-choice">
+                            <option value="null">-- Select One --</option>
+                            <option value="question">Question</option>
+                            <option value="comment">Comment</option>
+                            <option value="concern">Concern</option>
+                        </select>
+
                         <textarea name="comments-and-questions" rows="5" cols="40"></textarea>
+                        <button id="submit-button">Submit</button>
                     </fieldset>
                 </form>
             </section>
@@ -137,7 +155,12 @@
             <hr>
         </main>
         <footer>
-            
+            <h4>Mailing Address:</h4>
+            <p>
+                Unnamed Game Dev Team <br>
+                1234 Avenue Drive <br>
+                City, State 98765 <br>
+            </p>
         </footer>
     </body>
 </html>
